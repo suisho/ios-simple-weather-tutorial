@@ -59,6 +59,34 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor redColor];
+    
+    //
+    CGRect headerFrame = [UIScreen mainScreen].bounds;
+    
+    CGFloat inset = 20;
+    
+    CGFloat temptureHeight = 110;
+    CGFloat hiloHeight = 40;
+    CGFloat iconHeight = 30;
+    CGRect hiloFrame = CGRectMake(inset,
+                                  headerFrame.size.height-hiloHeight,
+                                  headerFrame.size.width - 2*inset,
+                                  hiloHeight);
+    
+    CGRect temperatureFrame = CGRectMake(inset,
+                                         headerFrame.size.height - (temptureHeight+hiloHeight),
+                                         headerFrame.size.width - 2*inset,
+                                         temptureHeight);
+    CGRect iconFrame = CGRectMake(inset,
+                                  temperatureFrame.origin.y - iconHeight,
+                                  iconHeight,
+                                  iconHeight);
+    CGRect conditionsFrame = iconFrame;
+    conditionsFrame.size.width = self.view.bounds.size.width -(((2 * inset) + iconHeight) +10);
+    conditionsFrame.origin.x = iconFrame.origin.x + (iconHeight + 10);
+    
+    /////
+    
 }
 
 - (void)didReceiveMemoryWarning
@@ -70,6 +98,16 @@
     return UIStatusBarStyleLightContent;
 }
 
+- (void)viewWillLayoutSubviews {
+    [super viewWillLayoutSubviews];
+    
+    CGRect bounds = self.view.bounds;
+    
+    self.backgroundImageView.frame = bounds;
+    self.blurredImageView.frame = bounds;
+    self.tableView.frame = bounds;
+    
+}
 
 #pragma mark - UITableViewDataSource
 

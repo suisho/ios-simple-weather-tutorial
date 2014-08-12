@@ -51,6 +51,7 @@
 		D5CCF953199A5F5800F81E87 /* WXController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5CCF94D199A5F5800F81E87 /* WXController.m */; };
 		D5CCF954199A5F5800F81E87 /* WXDailyForecast.m in Sources */ = {isa = PBXBuildFile; fileRef = D5CCF94F199A5F5800F81E87 /* WXDailyForecast.m */; };
 		D5CCF955199A5F5800F81E87 /* WXManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D5CCF951199A5F5800F81E87 /* WXManager.m */; };
+		D5CCF958199A611700F81E87 /* WXClient.m in Sources */ = {isa = PBXBuildFile; fileRef = D5CCF957199A611700F81E87 /* WXClient.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -118,6 +119,8 @@
 		D5CCF94F199A5F5800F81E87 /* WXDailyForecast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXDailyForecast.m; sourceTree = "<group>"; };
 		D5CCF950199A5F5800F81E87 /* WXManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXManager.h; sourceTree = "<group>"; };
 		D5CCF951199A5F5800F81E87 /* WXManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXManager.m; sourceTree = "<group>"; };
+		D5CCF956199A611700F81E87 /* WXClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WXClient.h; sourceTree = "<group>"; };
+		D5CCF957199A611700F81E87 /* WXClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WXClient.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +194,8 @@
 				D5CCF951199A5F5800F81E87 /* WXManager.m */,
 				D5CCF89D199A307300F81E87 /* WXController.h */,
 				D5CCF89E199A307300F81E87 /* WXController.m */,
+				D5CCF956199A611700F81E87 /* WXClient.h */,
+				D5CCF957199A611700F81E87 /* WXClient.m */,
 				D578C0F31999120C00FEFFAC /* AppDelegate.h */,
 				D578C0F41999120C00FEFFAC /* AppDelegate.m */,
 				D578C0F61999120C00FEFFAC /* Images.xcassets */,
@@ -428,6 +433,7 @@
 				D578C0F51999120C00FEFFAC /* AppDelegate.m in Sources */,
 				D5CCF954199A5F5800F81E87 /* WXDailyForecast.m in Sources */,
 				D578C0F11999120C00FEFFAC /* main.m in Sources */,
+				D5CCF958199A611700F81E87 /* WXClient.m in Sources */,
 				D5CCF955199A5F5800F81E87 /* WXManager.m in Sources */,
 				D5CCF952199A5F5800F81E87 /* WXCondition.m in Sources */,
 				D5CCF953199A5F5800F81E87 /* WXController.m in Sources */,

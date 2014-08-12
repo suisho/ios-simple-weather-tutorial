@@ -69,6 +69,37 @@
 - (UIStatusBarStyle)preferredStatusBarStyle {
     return UIStatusBarStyleLightContent;
 }
+
+
+#pragma mark - UITableViewDataSource
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 2;
+}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    // TODO: return count of forcast
+    return 0;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    static NSString *CellIdentifier = @"CellIdentifier";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    if(!cell){
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:CellIdentifier];
+    }
+    // 3
+    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    cell.backgroundColor = [UIColor colorWithWhite:0 alpha:0.2];
+    cell.textLabel.textColor = [UIColor whiteColor];
+    cell.detailTextLabel.textColor = [UIColor whiteColor];
+    return cell;
+}
+
+#pragma mark - UITableViewDelegate
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    // TODO: detect cell heigt based on screen
+    return 44;
+}
+
 /*
 #pragma mark - Navigation
 

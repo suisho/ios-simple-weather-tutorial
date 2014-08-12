@@ -9,6 +9,7 @@
 #import "MTLModel.h"
 #import <Mantle.h>
 
+
 @interface WXCondition : MTLModel <MTLJSONSerializing>
 
 @property (nonatomic, strong) NSData *date;

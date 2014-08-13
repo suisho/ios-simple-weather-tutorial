@@ -20,7 +20,6 @@
 		D578C1001999120C00FEFFAC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D578C0E81999120C00FEFFAC /* UIKit.framework */; };
 		D578C1081999120C00FEFFAC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D578C1061999120C00FEFFAC /* InfoPlist.strings */; };
 		D578C10A1999120C00FEFFAC /* SimpleWeatherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D578C1091999120C00FEFFAC /* SimpleWeatherTests.m */; };
-		D5CCF89F199A307300F81E87 /* WXController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5CCF89E199A307300F81E87 /* WXController.m */; };
 		D5CCF927199A4A4900F81E87 /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = D5CCF90C199A4A4900F81E87 /* bg.png */; };
 		D5CCF928199A4A4900F81E87 /* bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D5CCF90D199A4A4900F81E87 /* bg@2x.png */; };
 		D5CCF929199A4A4900F81E87 /* weather-broken.png in Resources */ = {isa = PBXBuildFile; fileRef = D5CCF90F199A4A4900F81E87 /* weather-broken.png */; };
@@ -437,7 +436,6 @@
 				D5CCF955199A5F5800F81E87 /* WXManager.m in Sources */,
 				D5CCF952199A5F5800F81E87 /* WXCondition.m in Sources */,
 				D5CCF953199A5F5800F81E87 /* WXController.m in Sources */,
-				D5CCF89F199A307300F81E87 /* WXController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

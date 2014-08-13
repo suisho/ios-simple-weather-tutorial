@@ -7,16 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
-/*
+
 @import CoreLocation;
 #import <ReactiveCocoa/ReactiveCocoa/ReactiveCocoa.h>
 @import Foundation;
-*/
+
 @interface WXClient : NSObject
-/*
+
+@property (nonatomic, strong) NSURLSession *session;
+
 - (RACSignal *)fetchJSONFromURL:(NSURL *)url;
 - (RACSignal *)fetchCurrentConditionsForLocation:(CLLocationCoordinate2D)cordinate;
 - (RACSignal *)fetchHourlyForecastForLocation:(CLLocationCoordinate2D)cordinate;
 - (RACSignal *)fetchDailyForecastForLocation:(CLLocationCoordinate2D)cordinate;
-*/
+
 @end

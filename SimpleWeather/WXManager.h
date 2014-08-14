@@ -26,5 +26,6 @@
 @property (nonatomic, assign) BOOL isFirstUpdate;
 @property (nonatomic, strong) WXClient *client;
 
+- (void)findCurrentLocation;
 
 @end

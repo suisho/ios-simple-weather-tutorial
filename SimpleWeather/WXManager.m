@@ -20,7 +20,7 @@
 }
 - (void)findCurrentLocation{
     self.isFirstUpdate = YES;
-    [self.locatioManager startUpdatingLocation];
+    [self.locationManager startUpdatingLocation];
 }
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations{
     if(self.isFirstUpdate){
@@ -31,7 +31,7 @@
     
     if(location.horizontalAccuracy > 0){
         self.currentLocation = location;
-        [self.locatioManager stopUpdatingLocation];
+        [self.locationManager stopUpdatingLocation];
     }
 }
 - (RACSignal *)updateCurrentConditions{
@@ -52,10 +52,10 @@
 
 - (id)init {
     if(self = [super init]){
-        _locatioManager = [[CLLocationManager alloc] init];
-        _locatioManager.delegate = self;
+        _locationManager = [[CLLocationManager alloc] init];
+        _locationManager.delegate = self;
         _client = [[WXClient alloc] init];
-    
+        //3
         [[[[RACObserve(self, currentLocation)
             ignore:nil]
             flattenMap:^(CLLocation *newLocation){
@@ -65,15 +65,13 @@
                         [self updateHourlyForecast],
                         ]];
             }] deliverOn:RACScheduler.mainThreadScheduler]
-          
-              subscribeError:^(NSError *error){
-                [TSMessage showNotificationWithTitle:@"Error"
-                                            subtitle:@"There was a problem fetching the latest weather."
-                                                type:TSMessageNotificationTypeError];
-              }];
-         }
-         return self;
-
+         subscribeError:^(NSError *error){
+             [TSMessage showNotificationWithTitle:@"Error"
+                                         subtitle:@"There was a problem fetching the latest weather."
+                                             type:TSMessageNotificationTypeError];
+         }];
+    }
+    return self;
 }
 
            
